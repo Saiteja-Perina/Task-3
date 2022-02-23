@@ -6,41 +6,41 @@ body{
     background-size: cover;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-#header, #header2, #innerNav, #footer{
+.header, #header2, #innerNav, .footer{
     display: flex;
     justify-content: space-between;
 }
-#header{
+.header{
     width: 75%;
     margin: 0 auto;
 }
-#header ul, #innerNav ul, #footer ul{
+.links{
     list-style-type: none;
     overflow: hidden;
     font-size: 14px;
     padding: 0;
 }
-#header ul{
+.header .links{
     float: right;
     margin: 20px 0 10px 0;
 }
-#header ul li, #footer ul li{
+.header .links li, .footer .links li{
     float: left;
     color: #c2c2c2;
     padding-left: 15px;
     border-right: 1px solid #c2c2c2;
 }
-#header ul li a, #innerNav ul li a{
+.header .links li a, #innerNav .links li a{
     text-decoration: none;
 }
-#header ul li a{
+.header .links li a{
     color: #c2c2c2;
     padding-right: 15px;
 }
-#header ul #lastLink{
+.header .links .lastLink{
     border: 0;
 }
-#header ul li .checkout{
+.header .links li .checkout{
     color: black;
 }
 #navbar{
@@ -53,15 +53,15 @@ body{
     border-top: 1px solid #D8D6D7;
     border-bottom: 1px solid #D8D6D7;
 }
-#innerNav ul{
+#innerNav .links{
     margin: 0 0 0 12.5%;
 }
-#innerNav ul li{
+#innerNav .links li{
     float: left;
     padding: 12px 12.5px;
     border-right: 1px solid white;
 }
-#innerNav ul li a{
+#innerNav .links li a{
     color: black;
 }
 #innerNav #search{
@@ -78,82 +78,87 @@ body{
     margin: 9.4px 0;
     border-radius: 5px;
 }
-#outer{
+#header2Outer{
     border-bottom: 1px solid #D8D6D7;
 }
 #header2{
     margin: 0 12.5%;
 }
-#header2 ul{
+#header2 .links{
     margin: 14.2px 0 8px 0;
     overflow: hidden;
     list-style-type: circle;
     font-size: 14px;
     padding: 0;
 }
-#header2 ul li{
+#header2 .links li{
     float: left;
     padding-right: 25px;
     color: #8692b0;
 }
-#header2 ul li::marker{
+#header2 .links li::marker{
     color: black;
 }
-#header2 #image{
+#header2 #bridalRegistry{
     display: flex;
 }
-#image p{
+#bridalRegistry p{
     color: #8692b0;
     font-size: 14px;
 }
-#body1, #body2{
+.body1, .body2{
     width: 75%;
     margin: 0 auto;
     display: flex;
     padding: 10px;
 }
-#body1{
+.body1{
     background-color: white;
     height: auto;
 }
-#body1 img{
+.body1 #mainImage{
     width: 72%;
     padding-right: 10px;
 }
-#body1 #options{
+.body1 #options{
     background-color: #3e3d3b;
     width: 28%;
     padding: 10px;
 }
-#body1 #options #inner{
+.body1 #options #inner{
     border: 1px solid #504f4d;
-    padding: 5px 20px 20px 20px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    padding-left: 20px;
 }
 #inner p{
     font-size: 30px;
     color: white;
     font-weight: lighter;
     margin-bottom: 20px;
+    align-content: center;
+    width: 100%;
 }
-#inner #info{
+#inner .info{
     font-size: 14px;
     color: #898788;
     line-height: 25px;
     padding-bottom: 15px;
     margin: 0;
 }
-#inner ul{
+#inner .links{
     list-style-type: none;
     font-size: 16px;
     padding: 0;
     margin: 0;
     color: white;
+    width: 80%;
 }
-#inner ul li{
+#inner .links li{
     padding: 10px 0;
     border-bottom: 2px solid #504f4d;
 }
-#inner ul #lastLink{
+#inner .links .lastLink{
     border-bottom: 0;
     padding-bottom: 20px;
 }
@@ -161,38 +166,38 @@ body{
     color: #898788;
     font-size: 13px;
 }
-#body2{
+.body2{
     background-color: black;
 }
-#body2 #tile1, #body2 #tile2, #body2 #tile3{
+.body2 .tile{
     width: calc(100%/3);
     background-color: white;
     background-repeat: no-repeat;
     background-size: contain;
 }
-#body2 #tile1{
+.body2 .left-bottom-image{
     height: auto;
     background-image: url("Images/promo_glass.png");
     background-position: left bottom;
 }
-#tile1 p, #tile2 p, #tile3 p{
+.tile p{
     margin: 0;
     padding: 20px 5px 5px 20px;
     font-size: 18px;
 }
-#tile1 #info, #tile2 #info{
+.left-bottom-image .info, .center-bottom-image .info{
     padding: 0 5px 20px 20px;
     font-size: 12px;
     color: #898788;
 }
-#tile1 a, #tile2 a{
+.left-bottom-image a, .center-bottom-image a{
     float: right;
     padding-right: 10px;
     font-size: 15px;
     text-decoration: none;
     color: #8692b0;
 }
-#body2 #tile2{
+.body2 .center-bottom-image{
     height: auto;
     background-image: url("Images/promo_plates.png");
     background-position: center bottom;
@@ -200,42 +205,42 @@ body{
     border-style: solid;
     border-image: linear-gradient(to bottom,white, #e8e8e8,white) 1;
 }
-#body2 #tile3{
+.body2 .right-bottom-image{
     height: 200px;
     background-image: url("Images/promo_album.png");
     background-position: right bottom;
 }
-#tile3 #info{
+.right-bottom-image .info{
     font-size: 12px;
     color: #898788;
     padding: 10px 5px 20px 20px;
     line-height: 20px;
 }
-#tile3 a{
+.right-bottom-image a{
     font-size: 15px;
     text-decoration: none;
     color: #8692b0;
     padding-left: 20px;
 }
-#footer{
+.footer{
     width: 75%;
     margin: 0 auto;
     padding: 0 10px;
 }
-#footer ul{
+.footer .links{
     font-size: 12px;
 }
-#footer ul #lastLink{
+.footer .links .lastLink{
     border-right: 0;
 }
-#footer ul li a{
+.footer .links li a{
     color: #c2c2c2;
     padding-right: 15px;
 }
-#footer p, #footer p a{
+.footer p, .footer p a{
     color: #c2c2c2;
     font-size: 12px;
 }
-#footer input[type=submit]{
+.footer input[type=submit]{
     border-radius: 5px;
 }
